@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "devcontainer-demo"
+		}
+	],
+	"extensions": {
+		"recommendations": [
+			c"ms-vscode-remote.vscode-remote-extensionpack"
+		]
+	}
+}

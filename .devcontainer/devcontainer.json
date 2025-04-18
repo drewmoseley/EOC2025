@@ -1,0 +1,7 @@
+{
+	"name": "RPi Cross-Compiler",
+	"build": { "dockerfile": "Dockerfile" },
+	"settings": {
+	  "C_Cpp.default.compilerPath": "/usr/bin/aarch64-linux-gnu-g++"
+	}
+  }
