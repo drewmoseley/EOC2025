@@ -10,8 +10,9 @@ typedef struct {
 
 int main() {
     GPIO_Config myPin;
-    myPin.mode = 0x1;
-    myPin.status = 0x0;
+    myPin.mode = 0x01; // Set mode to output
+    myPin.status = 0x01; // Set status to high
+    printf("Pin mode: %u, Pin status: %u\n", myPin.mode, myPin.status);
 }
 
 int main2() {
