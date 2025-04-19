@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "build",
+      "command": "gcc",
+      "args": [
+        "hello.c",
+        "-o",
+        "hello",
+        "-g"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
