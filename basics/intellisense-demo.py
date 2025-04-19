@@ -1,8 +1,11 @@
-greeting = "Hello, EOC 2025"
-# prin
+from os import symlink
 
-# symlin
+
+greeting = "Hello, EOC 2025"
+print(greeting)
+
+symlink()
 
 import numpy as np  
 arr = np.array([1, 2, 3])  
-# arr.m
+arr.max()
