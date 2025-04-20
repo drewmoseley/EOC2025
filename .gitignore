@@ -1,2 +1,4 @@
 devcontainer-demo/hello-pi
 RpiDev/hello
+.gdb_history
+RpiDev-Cross/build/

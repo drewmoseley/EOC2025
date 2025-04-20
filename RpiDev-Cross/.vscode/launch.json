@@ -1,0 +1,44 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Remote Debug ARM",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/build/hello-pi",
+            "args": [],
+            "stopAtEntry": true,
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb-multiarch",
+            "miDebuggerServerAddress": "192.168.17.79:2345",
+            "setupCommands": [
+                {
+                    "text": "-gdb-set target-async on",
+                    "ignoreFailures": true
+                },
+                {
+                    "text": "-interpreter-exec console \"set remote extended-remote-packet on\"",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Connect to remote target",
+                    "text": "target extended-remote 192.168.17.79:2345",
+                    "ignoreFailures": false
+                },
+                {
+                    "description": "Load symbols",
+                    "text": "file ${workspaceFolder}/build/hello-pi",
+                    "ignoreFailures": false
+                }    
+            ],
+            "preLaunchTask": "Deploy & Start Debug Server",
+            "logging": {
+                "engineLogging": true,
+                "trace": true,
+                "traceResponse": true
+            }
+        }
+    ]
+}
