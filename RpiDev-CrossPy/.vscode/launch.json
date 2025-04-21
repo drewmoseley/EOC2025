@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Remote Python Debug (RPi)",
+            "type": "debugpy",
+            "request": "attach",
+            "connect": {
+                "host": "192.168.17.79",
+                "port": 5678
+            },
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}",
+                    "remoteRoot": "/home/dmoseley/RpiDev-CrossPy"
+                }
+            ],
+            "preLaunchTask": "Start Remote Debugger",
+            "justMyCode": false  // Debug into library code if needed
+        }
+    ]
+}

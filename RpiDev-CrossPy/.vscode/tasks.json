@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Deploy to RPi",
+            "type": "shell",
+            "command": "rsync",
+            "args": [
+                "-avz",
+                "--delete",
+                "--exclude=.vscode",
+                "${workspaceFolder}/",
+                "dmoseley@rpifarm.local:/home/dmoseley/RpiDev-CrossPy"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Start Remote Debugger",
+            "type": "shell",
+            "command": "ssh",
+            "args": [
+                "dmoseley@rpifarm",
+                "bash /home/dmoseley/RpiDev-CrossPy/debug-py-launch.sh"
+            ],
+            "isBackground": true,
+            "dependsOn": ["Deploy to RPi"]
+        }
+    ]
+}

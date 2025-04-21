@@ -1,0 +1,13 @@
+{
+	// List of extensions which should be recommended for users of this workspace.
+	"recommendations": [
+		c"ms-python.python",
+		c"ms-python.debugpy",
+		c"github.copilot",
+		c"ms-vscode-remote.vscode-remote-extensionpack"
+	],
+	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+	"unwantedRecommendations": [
+		
+	]
+}
